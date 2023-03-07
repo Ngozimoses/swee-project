@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../my_project"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "swee.html"
+  }
+}

@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #4c5157;
+      }
+      #lo {
+        color: red;
+      }
+      #pk {
+        margin-top: 100px;
+        width: 398px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+        margin-left: 52px;
+      }
+      #pk:hover {
+        background-color: #4c5157;
+      }
+      #md {
+        width: 398px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+        margin-left: 75px;
+      }
+      #md:hover {
+        background-color: #4c5157;
+      }
+      #sd {
+        width: 398px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+        border: 20%;
+        margin-left: 52px;
+      }
+      #sd:hover {
+        background-color: #4c5157;
+      }
+      #pr {
+        text-align: center;
+      }
+      #sr {
+        width: 398px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+        border: 20%;
+      }
+      #sr:hover {
+        background-color: #4c5157;
+      }
+      #rf {
+        width: 100px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 25px;
+        margin-right: 0px;
+      }
+      #rf:hover {
+        background-color: #4c5157;
+      }
+      #fk:hover {
+        background-color: #4c5157;
+      }
+      #fk {
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+
+    <form method="POST" action="sign_up" id="pr">
+      {% csrf_token %}
+      <h1>sign up</h1>
+      <label for="">Username:</label>
+      <input
+        name="username"
+        type="text"
+        placeholder="Enter new username"
+        id="pk"
+      />
+      <br />
+
+      <label for="">email:</label>
+      <input
+        name="email"
+        type="text"
+        placeholder="Mobile number or email"
+        id="md"
+      />
+      <br />
+      <label for="">Password:</label>
+      <input name="Password" type="text" placeholder="Password" id="sd" /><br />
+      <label for="">Confirm Password:</label>
+      <input
+        name="confirm_password "
+        type="text"
+        placeholder="Confirm_Password"
+        id="sr"
+      />
+
+      <br />
+      <select name="select" id="rf">
+        <option>Region</option>
+        <option>Africa</option>
+        <option>Antarctica</option>
+        <option>Asia</option>
+        <option>Australia</option>
+        <option>North America</option>
+        <option>South America</option>
+        <option>Eroupe</option>
+      </select>
+
+      <input id="fk" type="submit" />
+    </form>
+  </body>
+</html>

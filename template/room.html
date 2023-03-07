@@ -1,0 +1,494 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="{% static 'favicon.png' %}" rel="icon" />
+    <link href="{% static 'img.jpg' %}" rel="icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: white;
+      }
+      .userm {
+        margin: 0px;
+        border: 5px solid #00000008;
+        background-color: rgb(48 48 180 / 17%);
+        border-radius: 10px;
+        padding: 0px;
+      }
+      #profile {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 0px;
+        cursor: pointer;
+        border: solid purple;
+      }
+      img {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0px;
+      }
+      #text {
+        width: 590px;
+        margin: 0px;
+        padding: 0 10px 0 19px;
+
+        max-height: none;
+        outline: none;
+        box-sizing: border-box;
+        height: 100px;
+        vertical-align: top;
+        background-color: #00000008;
+        border-radius: 10px;
+        border: 3px solid rgb(12 14 12 / 9%);
+      }
+      #area {
+        padding: 20px;
+        height: 140px;
+        background-color: #000000bd;
+        border-radius: 10px;
+        border: 3px solid rgb(12 14 12 / 9%);
+        margin-bottom: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        width: 100%;
+      }
+      #messages {
+        height: 450px;
+        background-color: #000000bd;
+        border-radius: 10px;
+        border: 3px solid rgb(12 14 12 / 9%);
+        padding: 10px;
+        width: 102%;
+      }
+      #user {
+        max-height: none;
+        outline: none;
+        box-sizing: border-box;
+        height: 449px;
+        display: inline-block;
+        margin: 0px;
+
+        width: 49.7%;
+      }
+      #clint {
+        max-height: none;
+        outline: none;
+        box-sizing: border-box;
+        height: 449px;
+
+        vertical-align: top;
+        display: inline-block;
+        margin: 0px;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 49.7%;
+        padding: 0px;
+      }
+      #display {
+        width: 100%;
+        height: 50%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #image1 {
+        margin: 0px;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        position: relative;
+        top: 1%;
+        left: 1%;
+      }
+      #cont {
+        width: 90%;
+        max-height: none;
+        overflow: auto;
+        outline: none;
+        box-sizing: border-box;
+        height: 345px;
+        display: inline-block;
+        margin: 0px;
+
+        position: relative;
+        left: 8%;
+        top: 0%;
+        border-radius: 10px;
+      }
+      #contt {
+        width: 90%;
+        overflow: auto;
+        max-height: none;
+        outline: none;
+        box-sizing: border-box;
+        height: 345px;
+        display: inline-block;
+        margin: 0px;
+
+        position: relative;
+        left: 2%;
+        top: 11%;
+        border-radius: 10px;
+      }
+
+      #line {
+        width: 1000px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        display: inline-block;
+      }
+      .icon {
+        max-height: none;
+        outline: none;
+        box-sizing: border-box;
+        height: 666px;
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 0px;
+        width: 166px;
+        background-color: #000000bd;
+        border-radius: 10px;
+        border: 3px solid rgb(12 14 12 / 9%);
+        padding: 0px;
+        position: absolute;
+        left: 86%;
+        top: 1%;
+      }
+      #icon1 {
+        height: 100px;
+        width: 100px;
+        background-color: #000000bd;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: solid purple;
+      }
+
+      #icon2 {
+        height: 100px;
+        width: 100px;
+        background-color: #00000069;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: solid;
+      }
+      #icon3 {
+        height: 100px;
+        width: 100px;
+        background-color: #00000069;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: solid;
+      }
+      #icon4 {
+        height: 100px;
+        width: 100px;
+        background-color: #00000069;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: solid;
+      }
+      #icon7 {
+        height: 50px;
+        width: 50px;
+        background-color: #00000069;
+        border-radius: 100%;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        position: relative;
+        left: 77%;
+        bottom: 3px;
+        border: solid purple;
+      }
+      #icon8 {
+        height: 50px;
+        width: 50px;
+        background-color: #00000069;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        top: 2%;
+        left: 3%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: solid purple;
+      }
+
+      #image2 {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        display: inline-block;
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+      }
+
+      #t2 {
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        position: relative;
+        left: 3%;
+        background-color: #ece9e900;
+        border-radius: 10px;
+        border: 0.1px solid rgb(12 14 12 / 9%);
+      }
+      #t1 {
+        width: 400px;
+        height: 30px;
+        border-radius: 5px;
+        position: relative;
+        left: -9%;
+        bottom: 80px;
+        background-color: #faf5f508;
+        border-radius: 10px;
+        border: 0.1px solid rgb(12 14 12 / 9%);
+      }
+      #online {
+        margin: 0px;
+        width: 150px;
+        height: 150px;
+        background-color: #faf5f508;
+        border-radius: 10px;
+        border: 0.1px solid rgb(12 14 12 / 9%);
+        padding: 0px;
+      }
+      p {
+        text-align: center;
+        margin: 0px;
+      }
+      i {
+        margin: 0px;
+        color: black;
+      }
+      #message {
+        position: relative;
+        top: 55px;
+        right: 110px;
+        width: 500px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 0px;
+        background-color: #000000bd;
+      }
+      #sub {
+        position: relative;
+        top: 10px;
+        left: 400px;
+        width: 45px;
+        height: 40px;
+        border-radius: 100%;
+        margin: 0px;
+        cursor: pointer;
+      }
+      sub :hover {
+        opacity: 7;
+        color: #00000069;
+      }
+      #bar {
+        position: relative;
+        left: 950px;
+        bottom: 105px;
+        margin: 0px;
+        height: 50px;
+        width: 50px;
+
+        border-radius: 10%;
+      }
+      #a {
+        margin: 0px;
+        height: 7px;
+        width: 1px;
+        color: #0000009e;
+      }
+      #a:hover {
+        color: #000000d8;
+        cursor: pointer;
+      }
+
+      nav {
+        margin: 0px;
+      }
+      ul {
+        margin: 0px;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="userm">
+      <div id="line">
+        <div id="area">
+          <div id="profile">
+            <a href="#"><img src="{% static 'mosesFb.jpg' %}" alt="" /></a>
+          </div>
+          <div id="bar">
+            <a href="home"
+              ><nav>
+                <ul>
+                  <li id="a"></li>
+                  <li id="a"></li>
+                  <li id="a"></li>
+                </ul></nav
+            ></a>
+          </div>
+        </div>
+        <div id="messages">
+          <div id="user">
+            <img id="image1" src="{% static 'elijah.jpg' %}" alt="" />
+
+            <div id="cont">
+              <div id="display"></div>
+            </div>
+          </div>
+          <div id="clint">
+            <img id="image2" src="{% static 'mosesFb.jpg' %}" alt="" />
+
+            <div id="contt">
+              <div id="display"></div>
+            </div>
+
+            <form style="border: 0%" id="post-form">
+              {% csrf_token %}
+              <input
+                type="hidden"
+                name="username"
+                id="username"
+                value="{{username}}"
+              />
+              <input
+                type="hidden"
+                name="room_id"
+                id="room_id"
+                value="{{room_details.id}}"
+              />
+              <input type="text" name="message" id="message" width="100px" />
+              <input id="sub" type="submit" value="Send" />
+            </form>
+          </div>
+          <br />
+        </div>
+      </div>
+      <div class="icon">
+        <div id="online">
+          <div id="icon1">
+            <a href="#"><img src="{% static 'elijah.jpg' %}" alt="" /></a>
+          </div>
+          <p><i>Elijah</i></p>
+        </div>
+        <div id="online">
+          <div id="icon2">
+            <a href="#"><img src="{% static 'azeezah.jpg' %}" alt="" /></a>
+          </div>
+          <p><i>Azeezah</i></p>
+        </div>
+        <div id="online">
+          <div id="icon3">
+            <a href="#"><img src="{% static 'mervelous.jpg' %}" alt="" /></a>
+          </div>
+          <p><i>Mervelous</i></p>
+        </div>
+        <div id="online">
+          <div id="icon4">
+            <a href="#"><img src="{% static 'uche.jpg' %}" alt="" /></a>
+          </div>
+          <p><i>Emanuel</i></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      setInterval(function () {
+        $.ajax({
+          type: "GET",
+          url: "/getMessages/{{room}}/",
+          success: function (response) {
+            console.log(response);
+            $("#display").empty();
+            for (var key in response.messages) {
+              var temp =
+                "<div class='container darker'><b>" +
+                response.messages[key].user +
+                "</b><p>" +
+                response.messages[key].value +
+                "</p><span class='time-left'>" +
+                response.messages[key].date +
+                "</span></div>";
+              $("#display").append(temp);
+            }
+          },
+          error: function (response) {
+            alert("An error occured");
+          },
+        });
+      }, 1000);
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).on("submit", "#post-form", function (e) {
+      e.preventDefault();
+
+      $.ajax({
+        type: "POST",
+        url: "/send",
+        data: {
+          username: $("#username").val(),
+          room_id: $("#room_id").val(),
+          message: $("#message").val(),
+          csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val(),
+        },
+        success: function (data) {
+          alert(data);
+        },
+      });
+      document.getElementById("message").value = "";
+    });
+  </script>
+</html>
